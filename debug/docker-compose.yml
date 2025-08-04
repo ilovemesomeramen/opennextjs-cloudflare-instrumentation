@@ -1,0 +1,16 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  http-echo:
+    image: mendhak/http-https-echo
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      - HTTP_ECHO_LOG_LEVEL=info
+      - ECHO_BACK_TO_CLIENT=false
+
+    restart: unless-stopped

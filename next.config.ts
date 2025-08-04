@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    env: {
+        OTEL_EXPORTER_OTLP_ENDPOINT: "http://localhost:8080"
+    }
 };
 
 export default nextConfig;
